@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "stratgem-game-py"
+version = "0.1.0"
+description = "This is the version the python version of the helldivers 2 stratgem feature game"
+authors = ["Patrick Alexander <patrick@corverdevelopment.nl>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pygame = "^2.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
