@@ -1,11 +1,13 @@
 import pygame
 
+
 # init pygame setup
-pygame.init()
-HEIGHT, WIDTH = 800, 800
-BACKGROUND_COLOR = (169, 169, 169)
-screen = pygame.display.set_mode((HEIGHT, WIDTH))
-running = True
+
+
+def main(running=True):
+    while running:
+        quit_game()
+
 
 def quit_game():
     for event in pygame.event.get():
@@ -15,10 +17,16 @@ def quit_game():
                 exit()
 
 
-while running:
-    screen.fill(BACKGROUND_COLOR)
-    quit_game()
+def game_screen():
+    pygame.init()
+    height, width = 800, 800
+    background_color = (169, 169, 169)
+    screen = pygame.display.set_mode((height, width))
+    screen.fill(background_color)
     pygame.display.update()
+    return screen
 
-pygame.quit()
 
+if __name__ == "__main__":
+    game_screen()
+    main()
